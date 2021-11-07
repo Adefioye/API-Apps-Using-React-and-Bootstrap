@@ -1,13 +1,10 @@
 import React from "react";
 import "./ImageList.css";
+import ImageCard from "./ImageCard";
 
 const ImageList = ({ images }) => {
   const renderedImages = images.map((image) => {
-    return (
-      <div key={image.id}>
-        <img src={image.urls.regular} alt={image.alt_description} />
-      </div>
-    );
+    return <ImageCard key={image.id} image={image} />;
   });
   return <div className="image-list">{renderedImages}</div>;
 };

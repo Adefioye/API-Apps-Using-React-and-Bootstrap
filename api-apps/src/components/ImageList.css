@@ -1,5 +1,13 @@
+/* .image-card {
+  width: 250px;
+  height: 250px;
+} */
 .image-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px;
+  gap: 0 5px;
+}
+.image-list img {
+  width: 250px;
 }
