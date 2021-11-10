@@ -1,0 +1,7 @@
+.fix-image {
+  height: 100%;
+  object-fit: cover;
+}
+.set-pointer {
+  cursor: pointer;
+}

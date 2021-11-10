@@ -6,10 +6,8 @@ const ImageCard = ({ image }) => {
 
   const calculateSpans = (event) => {
     const imageHeight = event.currentTarget.clientHeight;
-    console.log(imageHeight);
     const spans = Math.ceil(imageHeight / 10);
     setSpan(spans);
-    console.log(spans);
   };
   return (
     <div style={{ gridRowEnd: `span ${span}` }}>
