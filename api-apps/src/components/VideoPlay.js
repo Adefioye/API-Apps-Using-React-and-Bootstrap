@@ -7,9 +7,13 @@ const VideoPlay = ({ video }) => {
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+  const dateTime = new Date(Date.parse(video.snippet.publishedAt));
+  const month = dateTime.toLocaleString("en-US", { month: "short" });
+  const day = dateTime.toLocaleString("en-US", { day: "numeric" });
+  const year = dateTime.toLocaleString("en-US", { year: "numeric" });
 
   return (
-    <div className="video-card col-7 card mb-3">
+    <div className="video-card col-7 g-0 card">
       <div className="video-container">
         <iframe
           src={videoSrc}
@@ -23,7 +27,9 @@ const VideoPlay = ({ video }) => {
       <div className="card-body">
         <h5 className="card-title">{video.snippet.title}</h5>
         <p className="card-text">
-          <small className="text-muted">{video.snippet.publishedAt}</small>
+          <small className="text-muted">
+            {month} {day}, {year}
+          </small>
         </p>
       </div>
     </div>

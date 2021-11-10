@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const VideoSearchBar = ({ onVideoSearchSubmit }) => {
-  const [videoTerm, setVideoTerm] = useState("");
+  const [videoTerm, setVideoTerm] = useState("Carl Sagan");
 
   const onVideoFormSubmit = (event) => {
     event.preventDefault();

@@ -6,6 +6,7 @@ import VideoSearchBar from "./components/VideoSearchBar";
 import youtube from "./apis/youtube";
 import VideoList from "./components/VideoList";
 import VideoPlay from "./components/VideoPlay";
+import "./App.css";
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -18,8 +19,8 @@ const App = () => {
         q: term,
       },
     });
-    console.log(response.data.items);
     setVideos(response.data.items);
+    setSelectedVideo(videos[0]);
   };
 
   const onVideoClick = (video) => {
@@ -37,7 +38,7 @@ const App = () => {
   return (
     <div>
       <VideoSearchBar onVideoSearchSubmit={onVideoSearchSubmit} />
-      <div className="row">
+      <div className="mx-auto row">
         <VideoPlay video={selectedVideo} />
         <VideoList videos={videos} onVideoClick={onVideoClick} />
       </div>

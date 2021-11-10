@@ -5,3 +5,24 @@
 .set-pointer {
   cursor: pointer;
 }
+.card-title-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-text[dataTitle] {
+  position: relative;
+  cursor: help;
+}
+.card-text[dataTitle]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -46px;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
