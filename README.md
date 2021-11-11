@@ -16,3 +16,8 @@ The purpose of these projects is to reinforce my understanding on the use of API
 3. Truncating a certain number of lines of texts with ellipsis
 4. Implementing a tooltip
 5. Implementing a basic React router
+
+# TO-DOs
+
+1. Improve on the UI navigation bar
+2. Improve on mobile responsiveness by implementing breakpoints using bootstrap
