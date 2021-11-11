@@ -4,7 +4,13 @@ import VideoItem from "./VideoItem";
 
 const VideoList = ({ videos, onVideoClick }) => {
   const renderedVideos = videos.map((video) => {
-    return <VideoItem onVideoClick={onVideoClick} video={video} />;
+    return (
+      <VideoItem
+        key={video.id.videoId}
+        onVideoClick={onVideoClick}
+        video={video}
+      />
+    );
   });
   return <div className="col-5 mr-0">{renderedVideos}</div>;
 };

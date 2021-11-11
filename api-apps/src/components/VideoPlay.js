@@ -3,7 +3,13 @@ import "./VideoPlay.css";
 
 const VideoPlay = ({ video }) => {
   if (!video) {
-    return "Loading...";
+    return (
+      <div class="text-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
@@ -19,9 +25,9 @@ const VideoPlay = ({ video }) => {
           src={videoSrc}
           className="video-player"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <div className="card-body">

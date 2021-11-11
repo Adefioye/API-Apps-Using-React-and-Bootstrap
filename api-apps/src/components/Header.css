@@ -1,0 +1,15 @@
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 10vh;
+}
+
+.nav-links li:hover,
+.nav-links li:active,
+.nav-links li.active {
+  color: black !important;
+  padding-bottom: 0.25rem !important;
+  border-bottom: 4px solid black !important;
+}
