@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const VideoSearchBar = ({ onVideoSearchSubmit }) => {
-  const [videoTerm, setVideoTerm] = useState("Carl Sagan");
+  const [videoTerm, setVideoTerm] = useState();
 
   const onVideoFormSubmit = (event) => {
     event.preventDefault();
     onVideoSearchSubmit(videoTerm);
   };
+
+  useEffect(() => {
+    onVideoSearchSubmit("Carl Sagan");
+  }, [onVideoSearchSubmit]);
 
   const onVideoInputChange = (event) => {
     setVideoTerm(event.target.value);
@@ -14,7 +18,7 @@ const VideoSearchBar = ({ onVideoSearchSubmit }) => {
   return (
     <form onSubmit={onVideoFormSubmit} className="card p-3 mx-5 my-2 bg-light">
       <label htmlFor="formGroupExampleInput" className="form-label">
-        Video Search
+        Search for video text
       </label>
       <input
         type="text"

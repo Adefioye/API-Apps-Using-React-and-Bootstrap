@@ -19,7 +19,7 @@ const VideoPlay = ({ video }) => {
   const year = dateTime.toLocaleString("en-US", { year: "numeric" });
 
   return (
-    <div className="video-card col-7 g-0 card">
+    <div className="video-card col-md-7 mb-3 card">
       <div className="video-container">
         <iframe
           src={videoSrc}

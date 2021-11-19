@@ -12,7 +12,7 @@ const VideoList = ({ videos, onVideoClick }) => {
       />
     );
   });
-  return <div className="col-5 mr-0">{renderedVideos}</div>;
+  return <div className="col-md mr-0">{renderedVideos}</div>;
 };
 
 export default VideoList;
